@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>oishiiomuraisu | Shinjuku Gourmet Map
+        </title>
+        <meta name="description" content="">
+
+            <!--CSS-->
+        <link rel="stylesheet" href="https:unpkg.com/ress/dist/ress.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/login.css">
+    </head>
+
+    <body>
+        <!--CDNリンク先読込-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <div id="home">
+            <header class="page-header-wrapper">
+                <nav class="fade-in-left">
+                    <a class="button1" href="top_index.html">HOME</a>
+                </nav>
+            </header>
+        </div>
+
+        <div class="home-content-side fade-in-bottom">
+            <div class="home-content-wrapper">
+                <div class="login-text">
+                    <h1>LOGIN</h1>
+                    <p>メールアドレスとパスワードを入力してください</p>
+                </div>
+                 <form>
+                    <p>
+                        <label for="mail-input">メールアドレス</label><br>
+                        <input type="email" name="mail-input" id="mail-input" class="input-styles" placeholder=" 例) xxx_example@gmail.com" required>
+                    </p>
+                    <p class="password-input">
+                        <label for="password-input">パスワード</label><br>
+                        <input type="text" name="password-input" id="password-input" class="input-styles" placeholder=" 例) ●●●●●●●●" minlength="8" required>
+                    </p>
+                    <input type="submit" class="login-button" value="LOGIN">
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div class="wrapper">
+                <div class="footer-nav">
+                    <p><a href="top_index.html">HOME</a></p>
+                    <p><a href="">LOGIN</a></p>
+                    <p><a href="">SHOP LIST</a></p>
+                </div>
+                <p class=copy-right><small>&copy; 2021 FY21-shinsotsu 2-han</small></p>
+            </div>
+        </footer>
+        <script src="javascript/slidingpages.js"></script>
+    </body>
+</html>

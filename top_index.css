@@ -1,0 +1,246 @@
+@charset "UTF-8";
+
+/*共通部分*/
+html{
+    font-size: 100%;
+}
+body{
+    font-family: 'Noto Sans JP', 'Source Sans Pro', sans-serif;
+    line-height:1.7;
+    color: black;
+    background-color: #222;
+}
+img{
+    max-width: 100%;
+}
+
+/*ヘッダー*/
+.page-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Noto Serif JP';
+    font-size: 1rem;
+    margin-top: 34px;
+    padding: 0 60px;
+    list-style: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+.button1{
+    font-size: 1rem;
+    margin-top: 34px;
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
+    border-radius: 5px;
+    padding: 10px 32px;
+    transition: all 0.5s ease-out;
+}
+.button1:hover{
+    background: rgba(255, 255, 255, 0.7);
+}
+.button2{
+    font-size: 1rem;
+    font-weight:bold;
+    margin-top: 34px;
+    background: rgba(255, 102, 51, 0.7);
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 32px;
+    transition: all 0.5s ease-out;
+}
+.button2:hover{
+    background: #FF6666;
+}
+
+/*HOME*/
+.home-content-wrapper{
+    text-align: center;
+    margin-top: 16%;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 3%;
+    width: 100%;
+}
+.home-content-box{
+    padding:5%;
+    width: 100%;
+    background-color:rgba(255, 255, 255, 0.6);
+}
+/*見出し*/
+.page-title {
+    font-size: 3rem;
+    font-family: 'Abel', serif;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.home-content-box p{
+    font-family: 'Noto Serif JP', serif;
+}
+/*タイル*/
+.tiles {
+    font-family: 'Noto Serif JP', serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 4% 6% 6% 6%;
+}
+.item{
+    margin: 4%;
+    position: relative;
+}
+.item img{
+    transition: 0.2s;
+}
+.item:hover img{
+    transform: scale(0.96);
+    transition: 0.35s ease-in-out;
+}
+.item .mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0rem;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.2s;
+}
+.item .caption{
+    font-size: medium;
+    padding-top: 50px;
+    color: #fff;
+    position: absolute;
+    margin: 3rem;
+}
+.item:hover .mask{
+    transform: scale(0.96);
+    transition: 0.35s ease-in-out;
+    opacity: 1;
+}
+
+/*ページトップへ*/
+.go-pagetop{
+    text-decoration: none;
+    font-size: 1.5rem;
+    position: fixed;
+    bottom: 5%;
+    right: 0%;
+    padding: 0.5% 1.2%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.go-pagetop:hover{
+    background: rgba(255, 255, 255, 0.8);
+}
+.go-pagetop a p{
+    color: #000;
+}
+
+/*大きな背景写真*/
+.big-bg{
+    background-size: cover;
+    background-position: center top;
+}
+#home{
+    background-image: url(../images/davey-gravy-krsKfCC1lYw-unsplash.jpg);
+    min-height: 100vh;
+}
+#home .page-title{
+    text-transform: none;
+}
+
+/*フッター*/
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 10px 0;
+}
+.footer-nav{
+    padding: 2%;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: #fff;
+    font-size: 0.8rem;
+}
+.footer-nav p a{
+    color: #fff;
+}
+.copy-right{
+    padding: 2%;
+    color: white;
+    font-size: 0.875rem;
+}
+
+
+/*下からフェードインするアニメーション*/
+/*animation propaty：速さ・時間・回数などのコントロール*/
+.fade-in-bottom {
+    opacity: 0;
+    animation-name: fadein-bottom;
+    animation-duration: 2s;               /*時間*/
+    animation-timing-function: ease-out;    /*おわりゆっくり動かす*/
+    animation-fill-mode: forwards;          /*おわった後はそのままキープ*/
+    animation-delay: 1s;                    /*フェードインのタイミング指定*/
+ }
+ /*keyframes：色形大きさなどアニメーション本体の変化*/
+ @keyframes fadein-bottom {
+    0% {                                    /*開始時の状態*/
+       opacity: 0;                          /*透明度指定*/
+       transform: translateY(20px);         /*下に20pxずれた状態*/
+    }
+    100% {                                  /*終了時の状態*/
+       opacity: 1;
+       transform: translateY(0);
+    }
+ }
+
+ /*横からフェードインするアニメーション*/
+ .fade-in-left {
+    opacity: 0;
+    opacity: 0;
+    animation-name: fadein-left;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;  
+ }
+ @keyframes fadein-left {
+    0% {
+       opacity: 0;
+       transform: translateX(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
+ .fade-in-right {
+    opacity: 0;
+    opacity: 0;
+    animation-name: fadein-right;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;  
+ }
+ @keyframes fadein-right {
+    0% {
+       opacity: 0;
+       transform: translateX(20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
+
+ /* フェードイン用のCSS */
+.item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s 0s ease-out;
+}

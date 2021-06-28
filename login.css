@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+/*共通部分*/
+html{
+    font-size: 100%;
+}
+body{
+    font-family: 'Noto Serif JP', 'Noto Sans JP', 'Source Sans Pro', sans-serif;
+    line-height:1.7;
+    color: black;
+    background-color: #222;
+}
+img{
+    max-width: 100%;
+}
+
+/*ヘッダー*/
+.page-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding: 34px 60px;
+    list-style: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-image: url(../images/davey-gravy-krsKfCC1lYw-unsplash.jpg);
+    background-color:rgba(255,255,255,0.3);
+    background-blend-mode:lighten;
+    background-size: 100%;
+    background-position: center;
+}
+
+a {
+    text-decoration: none;
+}
+.button1{
+    font-size: 1rem;
+    margin-top: 34px;
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
+    border-radius: 5px;
+    padding: 10px 32px;
+    transition: all 0.5s ease-out;
+}
+.button1:hover{
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/*HOME*/
+.home-content-side{
+    background-color: #fff;
+    border: 0.7rem solid rgba(255, 102, 51, 0.2);
+    margin: 10rem 10% 5rem 10%;
+}
+.home-content-wrapper{
+    text-align: center;
+    z-index: 0;
+    left: 0;
+    top: 3%;
+    width: 100%;
+}
+.home-content p{
+    font-size: 3rem;
+    margin:10px 0 42px;
+    opacity: 1;
+    color: black;
+}
+
+.login-text{
+    padding: 5rem 0;
+    background-color: #fff;
+    height: 200px;
+    display: grid;
+    place-items: center;
+}
+.login-text h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+}
+.login-text p{
+    font-family: 'Noto Serif JP', serif;
+}
+.input-styles{
+    border: 0.5px solid #222;
+    width:25%;
+}
+.mail-input{
+    margin: 2rem 1rem 1rem 1rem;
+}
+.password-input{
+    margin: 1rem;
+}
+.login-button{
+    background-color: rgba(255, 102, 51, 0.8);
+    color: #fff;
+    padding: 0.2rem 1rem;
+    border-radius: 10px;
+    margin: 1.5rem 0 6rem 0;
+    transition: all 0.5s ease-out
+}
+.login-button:hover{
+    background-color: #FF6666;
+}
+
+/*フッター*/
+/*フッター*/
+footer {
+    font-family: 'Noto Sans JP';
+    background-color: #000;
+    text-align: center;
+    padding: 10px 0;
+}
+.footer-nav{
+    padding: 2%;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: #fff;
+    font-size: 0.8rem;
+}
+.footer-nav p a{
+    color: #fff;
+}
+.copy-right{
+    padding: 2%;
+    color: white;
+    font-size: 0.875rem;
+}
+
+
+/*下からフェードインするアニメーション*/
+/*animation propaty：速さ・時間・回数などのコントロール*/
+.fade-in-bottom {
+    opacity: 0;
+    animation-name: fadein-bottom;
+    animation-duration: 2s;               /*時間*/
+    animation-timing-function: ease-out;    /*おわりゆっくり動かす*/
+    animation-fill-mode: forwards;          /*おわった後はそのままキープ*/
+    animation-delay: 1s;                    /*フェードインのタイミング指定*/
+ }
+ /*keyframes：色形大きさなどアニメーション本体の変化*/
+ @keyframes fadein-bottom {
+    0% {                                    /*開始時の状態*/
+       opacity: 0;                          /*透明度指定*/
+       transform: translateY(20px);         /*下に20pxずれた状態*/
+    }
+    100% {                                  /*終了時の状態*/
+       opacity: 1;
+       transform: translateY(0);
+    }
+ }
+
+ /*横からフェードインするアニメーション*/
+ .fade-in-left {
+    opacity: 0;
+    opacity: 0;
+    animation-name: fadein-left;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;  
+ }
+ @keyframes fadein-left {
+    0% {
+       opacity: 0;
+       transform: translateX(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
+
+ /* フェードイン用のCSS */
+.item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s 0s ease-out;
+}

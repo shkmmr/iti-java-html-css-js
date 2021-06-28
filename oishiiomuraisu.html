@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>oishiiomuraisu | Shinjuku Gourmet Map
+        </title>
+        <meta name="description" content="">
+
+            <!--CSS-->
+        <link rel="stylesheet" href="https:unpkg.com/ress/dist/ress.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/omuraisu.css">
+    </head>
+
+    <body>
+        <!--CDNリンク先読込-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <header class="page-header-wrapper">
+            <nav class="fade-in-left">
+                <a class="button1" href="top_index.html">HOME</a>
+            </nav>
+            <nav class="fade-in-right">
+                <a class="button2" href="login.html">LOG IN</a>
+            </nav>
+        </header>
+
+        <div class="home-content-side fade-in-bottom" id="pagetop">
+            <div class="home-content-wrapper">
+                <div class="triangle1"></div>
+                <div class="triangle2"></div>
+                <div class="shop-name">
+                    <h1>o-ishii OMURAISU</h1>
+                    <p>おいしいおむらいす</p>
+                </div>
+                <div class="shop-info">
+                    <img src="images/Fotolia_103286824.jpg" alt="">
+                    <div class="shop-info-text">
+                        <p>すごくおいしいおむらいすすごくおいしいおむらいす<br>
+                        すごくおいしいおむらいすすごくおいしいおむらいす<br>
+                        すごくおいしいおむらいすすごくおいしいおむらいす<br>
+                        すごくおいしいおむらいすすごくおいしいおむらいす<br>
+                        すごくおいしいおむらいすたぶんおいしいおむらいす</p>
+                    </div>
+                </div>
+                <div class="inquiry">
+                    <form>
+                        <p>
+                            <label for="name-input">お名前</label><br>
+                            <input type="text" name="name-input" id="name-input" class="input-styles" placeholder=" 例) 新宿 太郎" required>
+                        </p>
+                        <p>
+                            <label for="mail-input">メールアドレス</label><br>
+                            <input type="email" name="mail-input" id="mail-input" class="input-styles" placeholder=" 例) xxx_example@gmail.com" required>
+                        </p>
+                        <p>
+                            <label for="inquiry-input">お問い合わせ内容</label><br>
+                            <textarea name="inquiry-input" id="inquiry-input" class="input-styles" placeholder=" ここに内容を入力してください" required></textarea><br>
+                            <input type="submit" class="submit-button" value="送信">
+                        </p>
+                    </form>
+                </div>
+                <hr>
+                <div class="comments">
+                </div>
+                <hr>
+                <div class="comment-post">
+                    <form>
+                        <p>
+                            <label for="handlename-input">ハンドルネーム</label><br>
+                            <input type="text" name="handlename-input" id="handlename-input" class="input-styles" placeholder=" 例) イーストサイド花子" required>
+                        </p>
+                        <p>
+                            <label for="comment-input">レビューを書く</label><br>
+                            <textarea name="message" id="comment-input" class="input-styles" placeholder=" ここに内容を入力してください" required></textarea><br>
+                            <input type="submit" class="submit-button" value="送信">
+                        </p>
+                    </form>
+                </div>
+                <hr>
+                <div class="googlemap">
+                    <p>所在地情報</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.1975323898664!2d139.7087546878329!3d35.696756397019556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cdef9e5d305%3A0x73c4e8de6d670270!2z5paw5a6_44Kk44O844K544OI44K144Kk44OJ44K544Kv44Ko44Ki!5e0!3m2!1sja!2sjp!4v1624711573576!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="go-pagetop fade-in-bottom">
+            <a href="#pagetop">
+                <p>^</p>
+            </a>
+        </div>
+        <footer>
+            <div class="wrapper">
+                <div class="footer-nav">
+                    <p><a href="top_index.html">HOME</a></p>
+                    <p><a href="">LOGIN</a></p>
+                    <p><a href="">SHOP LIST</a></p>
+                </div>
+                <p class=copy-right><small>&copy; 2021 FY21-shinsotsu 2-han</small></p>
+            </div>
+        </footer>
+        <script src="javascript/slidingpages.js"></script>
+    </body>
+</html>

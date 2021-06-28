@@ -1,0 +1,300 @@
+@charset "UTF-8";
+
+/*共通部分*/
+html{
+    font-size: 100%;
+}
+body{
+    font-family: 'Noto Serif JP', 'Noto Sans JP', 'Source Sans Pro', sans-serif;
+    line-height:1.7;
+    color: black;
+    background-color: #222;
+}
+img{
+    max-width: 100%;
+}
+
+/*ヘッダー*/
+.page-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding: 34px 60px;
+    list-style: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-image: url(../images/davey-gravy-krsKfCC1lYw-unsplash.jpg);
+    background-color:rgba(255,255,255,0.3);
+    background-blend-mode:lighten;
+    background-size: 100%;
+    background-position: center;
+}
+
+a {
+    text-decoration: none;
+}
+.button1{
+    font-size: 1rem;
+    margin-top: 34px;
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
+    border-radius: 5px;
+    padding: 10px 32px;
+    transition: all 0.5s ease-out;
+}
+.button1:hover{
+    background: rgba(255, 255, 255, 0.7);
+}
+.button2{
+    font-size: 1rem;
+    font-weight:bold;
+    margin-top: 34px;
+    background: rgba(255, 102, 51, 0.7);
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 32px;
+    transition: all 0.5s ease-out;
+}
+.button2:hover{
+    background: #FF6666;
+}
+
+/*HOME*/
+.home-content-side{
+    background-color: #fff;
+    border: 0.7rem solid rgba(63, 124, 185, 0.2);
+    margin: 10rem 10% 5rem 10%;
+}
+.home-content-wrapper{
+    text-align: center;
+    z-index: 0;
+    left: 0;
+    top: 3%;
+    width: 100%;
+}
+.home-content p{
+    font-size: 3rem;
+    margin:10px 0 42px;
+    opacity: 1;
+    color: black;
+}
+.triangle1{
+    position: absolute;
+    width:4rem;
+    padding: 0rem;
+    border-top: 4rem solid rgba(63, 124, 185, 0.2);
+    border-right: 10rem solid transparent;
+    border-bottom: 4rem solid transparent;
+    border-left: 10rem solid rgba(63, 124, 185, 0.2); 
+}
+.triangle2{
+    position: absolute;
+    right:0rem;
+    width:4rem;
+    padding: 0rem;
+    border-top: 4rem solid rgba(63, 124, 185, 0.2);
+    border-right: 10rem solid rgba(63, 124, 185, 0.2);
+    border-bottom: 4rem solid transparent;
+    border-left: 10rem solid transparent; 
+}
+/*線*/
+hr{
+    height: 1.5px;
+    background-color: rgba(63, 124, 185, 0.5);
+    width: 70%;
+    border: none;
+    text-align: center;     /*hrはブロック要素のため左右のmarginを指定しないと寄らない*/
+    margin: 0% 15% 0% 15%;
+}
+.shop-name{
+    padding: 5rem 0;
+    background-color: #fff;
+    height: 200px;
+    display: grid;
+    place-items: center;
+}
+.shop-name h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+}
+.shop-name p{
+    font-family: 'Noto Serif JP', serif;
+}
+.shop-info{
+    font-family: 'Noto Serif JP', serif;
+    height: 25rem;;
+    padding: 4rem 10rem 7rem 10rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;   
+}
+.shop-info img{
+    width:20rem;
+    height: 20rem;
+    flex:none       /*これを入れるとflexboxで子要素がでかすぎて自動で縮小されてしまうのを防げる*/
+}
+.shop-info-text{
+    width:50%;
+    margin-top: auto;       /*上下の間隔を取って無理やりimgに対して縦位置を中央にそろえてる*/
+    margin-bottom: auto;
+}
+form p{
+    margin-top: 1rem;
+}
+.input-styles{
+    border: 0.5px solid #222;
+    width:25%;
+}
+.inquiry{
+    padding: 5% 5%;
+    height: 25rem;
+}
+.comments{
+    padding: 5% 5%;
+    height: 20rem;
+}
+#handlename-input{
+    width: 50%;
+}
+.comment-post{
+    padding: 5% 5%;
+    height: 20rem;
+}
+.comment-post textarea{
+    width: 50%;
+}
+.submit-button{
+    padding: 0.2rem 1rem;
+    border: 1px solid rgb(199, 199, 199);
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    transition: all 0.5s ease-out;
+}
+.submit-button:hover{
+    border-color: rgba(63, 124, 185, 0.3);
+    background-color: rgba(63, 124, 185, 0.3);
+}
+.googlemap{
+    padding: 5% 5%;
+    height: 650px;
+}
+.googlemap p{
+    padding: 1rem;
+}
+
+
+
+/*ページトップへ*/
+.go-pagetop{
+    text-decoration: none;
+    font-size: 1.5rem;
+    position: fixed;
+    bottom: 5%;
+    right: 0%;
+    padding: 0.5% 1.2%;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.go-pagetop:hover{
+    background: rgba(255, 255, 255, 0.8);
+}
+.go-pagetop a p{
+    color: #000;
+}
+
+/*フッター*/
+/*フッター*/
+footer {
+    font-family: 'Noto Sans JP';
+    background-color: #000;
+    text-align: center;
+    padding: 10px 0;
+}
+.footer-nav{
+    padding: 2%;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: #fff;
+    font-size: 0.8rem;
+}
+.footer-nav p a{
+    color: #fff;
+}
+.copy-right{
+    padding: 2%;
+    color: white;
+    font-size: 0.875rem;
+}
+
+
+/*下からフェードインするアニメーション*/
+/*animation propaty：速さ・時間・回数などのコントロール*/
+.fade-in-bottom {
+    opacity: 0;
+    animation-name: fadein-bottom;
+    animation-duration: 2s;               /*時間*/
+    animation-timing-function: ease-out;    /*おわりゆっくり動かす*/
+    animation-fill-mode: forwards;          /*おわった後はそのままキープ*/
+    animation-delay: 1s;                    /*フェードインのタイミング指定*/
+ }
+ /*keyframes：色形大きさなどアニメーション本体の変化*/
+ @keyframes fadein-bottom {
+    0% {                                    /*開始時の状態*/
+       opacity: 0;                          /*透明度指定*/
+       transform: translateY(20px);         /*下に20pxずれた状態*/
+    }
+    100% {                                  /*終了時の状態*/
+       opacity: 1;
+       transform: translateY(0);
+    }
+ }
+
+ /*横からフェードインするアニメーション*/
+ .fade-in-left {
+    opacity: 0;
+    opacity: 0;
+    animation-name: fadein-left;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;  
+ }
+ @keyframes fadein-left {
+    0% {
+       opacity: 0;
+       transform: translateX(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
+ .fade-in-right {
+    opacity: 0;
+    opacity: 0;
+    animation-name: fadein-right;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;  
+ }
+ @keyframes fadein-right {
+    0% {
+       opacity: 0;
+       transform: translateX(20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
+
+ /* フェードイン用のCSS */
+.item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s 0s ease-out;
+}
