@@ -117,6 +117,10 @@ a {
     position: absolute;
     margin: 3rem;
 }
+.item h5{
+    margin-top: 2rem;
+    font-weight: 100;
+}
 .item:hover .mask{
     transform: scale(0.96);
     transition: 0.35s ease-in-out;
