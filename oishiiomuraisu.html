@@ -24,7 +24,7 @@
                 <a class="button1" href="top_index.html">HOME</a>
             </nav>
             <nav class="fade-in-right">
-                <a class="button2" href="login.html">LOG IN</a>
+                <a class="button2" href="login.html">LOGIN</a>
             </nav>
         </header>
 
@@ -70,15 +70,24 @@
                         </p>
                         <p>
                             <label for="inquiry-input">お問い合わせ内容</label><br>
-                            <textarea name="inquiry-input" id="inquiry-input" class="input-styles" placeholder=" ここに内容を入力してください" required></textarea><br>
+                            <textarea name="inquiry-input" id="inquiry-input" class="input-styles" 
+                            placeholder=" ここに内容を入力してください"  required></textarea><br>
                             <input type="submit" class="submit-button" value="送信">
                         </p>
                     </form>
                 </div>
                 <hr>
+                <!--jspに埋め込んだ時に取ってきて動く用-->
+                <h3>みんなの口コミ</h3>
                 <div class="comments">
-                    <p>HANDLENAME</p>
-                    <p>COMMENTS COMMENTS COMMENTS COMMENTS</p>
+                    <table border = 1>
+                        <% for (Comment comment : commentList) { %>
+                        <tr>
+                            <td id="commnt-username"><%= comment.getUserName() %></td>
+                            <td id="commnt-test"><%= comment.getText() %></td>
+                        </tr>
+                        <% } %>
+                    </table>
                 </div>
                 <div class="comment-post">
                     <form>
@@ -96,7 +105,7 @@
                 <hr>
                 <div class="googlemap">
                     <p>所在地情報</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.1975323898664!2d139.7087546878329!3d35.696756397019556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cdef9e5d305%3A0x73c4e8de6d670270!2z5paw5a6_44Kk44O844K544OI44K144Kk44OJ44K544Kv44Ko44Ki!5e0!3m2!1sja!2sjp!4v1624711573576!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12961.632360394517!2d139.7046466!3d35.691574!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9bd38301cfe4c730!2z6KW_5qu75LqtIOS8iuWLouS4ueaWsOWuv-W6lw!5e0!3m2!1sja!2sjp!4v1624884367865!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -109,7 +118,7 @@
             <div class="wrapper">
                 <div class="footer-nav">
                     <p><a href="top_index.html">HOME</a></p>
-                    <p><a href="">LOGIN</a></p>
+                    <p><a href="login.html">LOGIN</a></p>
                     <p><a href="">SHOP LIST</a></p>
                 </div>
                 <p class=copy-right><small>&copy; 2021 FY21-shinsotsu 2-han</small></p>

@@ -88,7 +88,7 @@ a {
     font-family: 'Noto Serif JP', serif;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 4% 6% 6% 6%;
+    margin: 6%;
 }
 .item{
     margin: 4%;
@@ -110,6 +110,11 @@ a {
     background-color: rgba(0, 0, 0, 0.4);
     transition: 0.2s;
 }
+.item:hover .mask{
+    transform: scale(0.96);
+    transition: 0.35s ease-in-out;
+    opacity: 1;
+}
 .item .caption{
     font-size: medium;
     padding-top: 50px;
@@ -121,11 +126,7 @@ a {
     margin-top: 2rem;
     font-weight: 100;
 }
-.item:hover .mask{
-    transform: scale(0.96);
-    transition: 0.35s ease-in-out;
-    opacity: 1;
-}
+
 
 /*ページトップへ*/
 .go-pagetop{
